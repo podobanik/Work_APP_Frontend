@@ -24,7 +24,7 @@ const Home = () => {
         <Container style={{marginTop: "20px"}}>
             <Row>
                 <Col>
-                    <ListProblems problems={problems} resetState={resetState} newStudent={false}/>
+                    <ListProblems problems={problems} resetState={resetState} newProblem={false}/>
                 </Col>
             </Row>
             <Row>

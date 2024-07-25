@@ -1,7 +1,7 @@
 import {Table} from "reactstrap";
 import ModalProblem from "../appModalProblem/ModalProblem";
 import AppRemoveProblem from "../appRemoveProblem/appRemoveProblem";
-import ModalPhoto from "../appPhotoModal/ModalPhoto";
+
 
 const ListProblems = (props) => {
     const {problems} = props
@@ -15,8 +15,7 @@ const ListProblems = (props) => {
                 <th>Статус задачи</th>
                 <th>Объект АСУТП</th>
                 <th>Контрольный срок</th>
-                <th>Фото сотрудника</th>
-                <th>"</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -34,9 +33,6 @@ const ListProblems = (props) => {
                         <td>{problem.problem_status}</td>
                         <td>{problem.object_of_work}</td>
                         <td>{problem.control_date}</td>
-                        <td><ModalPhoto
-                            problem={problem}
-                        /></td>
                         <td>
                             <ModalProblem
                                 create={false}

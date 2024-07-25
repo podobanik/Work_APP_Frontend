@@ -4,7 +4,7 @@ import axios from "axios";
 import {API_URL} from "../index";
 
 const ProblemForm = (props) => {
-    const [student, setProblem] = useState({})
+    const [problem, setProblem] = useState({})
 
     const onChange = (e) => {
         const newState = problem
@@ -43,7 +43,6 @@ const ProblemForm = (props) => {
             problem_status: problem['problem_status'],
             object_of_work: problem['object_of_work'],
             control_date: problem['control_date'],
-            photo: "/",
             file: problem['file']
         }
         // eslint-disable-next-line
@@ -54,7 +53,7 @@ const ProblemForm = (props) => {
             })
     }
     return (
-        <Form onSubmit={props.newStudent ? submitDataAdd : submitDataEdit}>
+        <Form onSubmit={props.newProblem ? submitDataAdd : submitDataEdit}>
             <FormGroup>
                 <Label for="problem_text">Название задачи:</Label>
                 <Input
@@ -67,7 +66,7 @@ const ProblemForm = (props) => {
             <FormGroup>
                 <Label for="staff">Ответственный сотрудник</Label>
                 <Input
-                    type="text"
+                    type="int"
                     name="staff"
                     onChange={onChange}
                     defaultValue={defaultIfEmpty(problem.staff)}
@@ -107,15 +106,6 @@ const ProblemForm = (props) => {
                     name="control_date"
                     onChange={onChange}
                     defaultValue={defaultIfEmpty(problem.control_date)}
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label for="photo">Photo:</Label>
-                <Input
-                    type="file"
-                    name="file"
-                    onChange={onChange}
-                    accept='image/*'
                 />
             </FormGroup>
             <div style={{display: "flex", justifyContent: "space-between"}}>

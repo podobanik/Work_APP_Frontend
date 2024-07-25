@@ -5,8 +5,8 @@ import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const API_URL = "http://127.0.0.1:9000/"
-export const API_STATIC_MEDIA = "http://127.0.0.1:9000/problems/"
+export const API_URL = "http://127.0.0.1:8000/"
+export const API_STATIC_MEDIA = "http://127.0.0.1:8000/problems"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
