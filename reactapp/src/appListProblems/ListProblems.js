@@ -1,4 +1,5 @@
 import {Table} from "reactstrap";
+import { useTable } from "react-table";
 import ModalProblem from "../appModalProblem/ModalProblem";
 import AppRemoveProblem from "../appRemoveProblem/appRemoveProblem";
 
