@@ -42,8 +42,7 @@ const ProblemForm = (props) => {
             problem_type: problem['problem_type'],
             problem_status: problem['problem_status'],
             object_of_work: problem['object_of_work'],
-            control_date: problem['control_date'],
-            file: problem['file']
+            control_date: problem['control_date']
         }
         // eslint-disable-next-line
         const result = await axios.post(API_URL, data, {headers: {'Content-Type': 'multipart/form-data'}})
@@ -66,7 +65,7 @@ const ProblemForm = (props) => {
             <FormGroup>
                 <Label for="staff">Ответственный сотрудник</Label>
                 <Input
-                    type="int"
+                    type="text"
                     name="staff"
                     onChange={onChange}
                     defaultValue={defaultIfEmpty(problem.staff)}
